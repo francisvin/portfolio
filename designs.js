@@ -121,16 +121,20 @@ function setPixelverseImage(img, design, size, onFail) {
 }
 
 /* ---------- the collection: listed designs + anything new in the folder ---------- */
-/* When the site is served by a server that lists folders (VS Code Live Server,
-   `python -m http.server`, Apache/nginx autoindex …), images dropped into
-   img/pixelverse/ are found automatically. Elsewhere (opening the file directly,
-   GitHub Pages …) the list above is used as is. */
+/* When the site runs on a local server that lists folders (VS Code Live Server,
+   `python -m http.server` …), images dropped into img/pixelverse/ are found
+   automatically. Online (GitHub Pages) and when opening the file directly, folders
+   can't be listed, so the list above is used as is — without trying, so the
+   browser console stays free of "not found" errors. */
 
 const PIXELVERSE_IMAGE = /\.(png|jpe?g|webp|avif|gif)$/i;
 
 // image file names directly inside a folder, read from the server's folder listing
+const LOCAL_HOST = /^(localhost|\[::1\]|127\.\d+\.\d+\.\d+|10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(1[6-9]|2\d|3[01])\.\d+\.\d+)$/;
+
 async function listImageFolder(folder) {
-  if (location.protocol === 'file:') return []; // browsers can't list folders for local files
+  // only local test servers list folders; GitHub Pages and file:// never do
+  if (location.protocol === 'file:' || !LOCAL_HOST.test(location.hostname)) return [];
   try {
     const res = await fetch(folder, { cache: 'no-store' });
     if (!res.ok || !(res.headers.get('content-type') || '').includes('html')) return [];
