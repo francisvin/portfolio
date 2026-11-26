@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" class="intro-running">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Francis Vin Portfolio</title>
+<link rel="icon" type="image/png" href="img/Logo icon.png">
+<link rel="stylesheet" href="portfolio.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@600&family=Noto+Sans+JP:wght@600&display=swap&text=%ED%94%84%EB%9E%9C%EC%8B%9C%EC%8A%A4%20%EB%B9%88%E3%83%95%E3%83%A9%E3%83%B3%E3%82%B7%E3%82%B9%E3%83%BB%E3%83%B4%E3%82%A3%E3%83%B3" rel="stylesheet">
+</head>
+<body>
+
+<!-- INTRO: glitch name transformation -> VIN -> logo -> zoom into Home -->
+<div id="intro" class="intro" aria-hidden="true">
+	<canvas class="intro-pixels"></canvas>
+	<button type="button" class="intro-skip">Skip intro</button>
+</div>
+
+<nav>
+<ul>
+<li data-section="home" onclick="showSection('home')">Home</li>
+<li data-section="about" onclick="showSection('about')">About Me</li>
+<li data-section="designs" onclick="showSection('designs')">Pixelverse</li>
+<li data-section="contacts" onclick="showSection('contacts')">Contacts</li>
+</ul>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="section active">
+	<div class="home-copy home-copy-right">
+		<div class="home-float">
+			<div class="home-bubble">
+				<p class="home-tagline">A portfolio because screenshots aren’t enough.</p>
+			</div>
+		</div>
+	</div>
+
+	<svg class="lanyard" aria-hidden="true" focusable="false">
+		<defs>
+			<pattern id="strap-weave" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+				<rect width="5" height="5" fill="#131315"/>
+				<rect width="2.5" height="5" fill="#1d1d21"/>
+			</pattern>
+		</defs>
+		<path class="lanyard-strap" d=""/>
+		<path class="lanyard-stripe" d=""/>
+	</svg>
+	<div class="id-card-zone">
+		<svg class="id-hardware" viewBox="0 0 100 120" aria-hidden="true" focusable="false">
+			<defs>
+				<linearGradient id="silver" x1="0" x2="1" y1="0" y2="0">
+					<stop offset="0" stop-color="#7c7f87"/>
+					<stop offset="0.35" stop-color="#f4f5f7"/>
+					<stop offset="0.6" stop-color="#b9bcc3"/>
+					<stop offset="1" stop-color="#6f727a"/>
+				</linearGradient>
+			</defs>
+			<!-- D-ring the strap loops through -->
+			<path d="M11 9 H89 Q95 9 93 15 Q83 40 50 42 Q17 40 7 15 Q5 9 11 9 Z" fill="none" stroke="url(#silver)" stroke-width="5.5" stroke-linejoin="round"/>
+			<!-- swivel eye -->
+			<circle cx="50" cy="47" r="5" fill="none" stroke="url(#silver)" stroke-width="3.2"/>
+			<!-- lobster clasp body and gate -->
+			<path d="M45 53 Q40 70 43 86 Q46 99 52 101 Q59 99 58.5 87 L57 57 Q55 52 50 52 Q47 52 45 53 Z" fill="url(#silver)" stroke="#5f626a" stroke-width="0.8"/>
+			<path d="M54 60 L55.5 86" stroke="#5f626a" stroke-width="1.2" stroke-linecap="round"/>
+			<!-- hook through the slot -->
+			<path d="M51.5 100 Q52 112 45 114 Q38.5 113.5 40 106" fill="none" stroke="url(#silver)" stroke-width="4.2" stroke-linecap="round"/>
+		</svg>
+		<div class="id-card" tabindex="0" role="button" aria-pressed="false" aria-label="Francis Vin student ID card. Drag to swing, press to flip.">
+			<div class="id-card-inner">
+				<div class="id-face id-front">
+					<span class="id-slot"></span>
+					<div class="id-head">
+						<span class="id-school">Palawan State University</span>
+						<span class="id-kicker">Student ID</span>
+					</div>
+					<div class="id-photo"><img src="img/My character photo.jpg" alt="Francis Vin’s character" draggable="false"></div>
+					<strong class="id-name id-name-front">Francis Vin</strong>
+					<span class="id-value">Web Developer &amp; Graphic Designer</span>
+					<span class="id-label">Program</span>
+					<span class="id-value">BS Information Technology</span>
+					<span class="id-barcode"></span>
+					<span class="id-glare"></span>
+				</div>
+				<div class="id-face id-back">
+					<span class="id-slot"></span>
+					<div class="id-head">
+						<span class="id-school">Palawan State University</span>
+						<span class="id-kicker">Student Information</span>
+					</div>
+					<dl class="id-details">
+						<div><dt>Name</dt><dd>Francis Vin</dd></div>
+						<div><dt>Program</dt><dd>BS Information Technology</dd></div>
+						<div><dt>Skill</dt><dd>I can make it happen</dd></div>
+						<div><dt>Focus</dt><dd>Graphic Design · Web Development</dd></div>
+						<div><dt>Email</dt><dd>francisvin18@gmail.com</dd></div>
+					</dl>
+					<div class="id-signature">
+						<span class="id-sign">Francis Vin</span>
+						<span class="id-label">Cardholder’s signature</span>
+					</div>
+					<span class="id-glare"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<h1 class="brand">FRANSSAKIRA</h1>
+	<img src="img/Bleach (side).png" class="profile angle-front" alt="">
+	<div class="scroll-cue" aria-hidden="true"><span>Scroll</span><i></i></div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+	<div class="about-brand-sticky" aria-hidden="true"><div class="about-brand-pin"><h1 class="brand">ABOUT ME</h1></div></div>
+
+	<!-- 01: Information boxes + marquee -->
+	<div class="about-sub about-sub-info">
+		<span class="about-kicker reveal"><b>01</b> What I Do</span>
+		<div class="stack-cards reveal">
+			<article class="stack-card" style="--i:0">
+				<span class="stack-label">Introduction</span>
+				<p>I'm Francis Vin, a passionate digital artist and creative designer. Graphic design is more than just a skill; it’s my passion.</p>
+			</article>
+			<article class="stack-card" style="--i:1">
+				<span class="stack-label">What I Do</span>
+				<p>I help businesses and individuals bring their ideas to life through creative and professional graphic design.</p>
+			</article>
+			<article class="stack-card" style="--i:2">
+				<span class="stack-label">Quote</span>
+				<p class="stack-quote">Turning chaos into something presentable.</p>
+			</article>
+		</div>
+		<div class="info-marquee reveal" style="--d:.2s" aria-label="Highlights">
+			<div class="marquee-track">
+				<div class="about-box marquee-card">
+				I'm Francis Vin, a passionate digital artist and creative designer. Graphic design is more than just a skill; it’s my passion.
+				</div>
+				<div class="about-box marquee-card">
+				I genuinely enjoy the creative process of turning a blank canvas into an eye-catching visual experience.
+				</div>
+				<div class="about-box marquee-card">
+				I create minimalist, aesthetically pleasing graphic designs with a creative touch, using Affinity as my primary design tool.
+				</div>
+				<div class="about-box me-small-box marquee-card">
+					<h3>What I Do</h3>
+					<p>I help businesses and individuals bring their ideas to life through creative and professional graphic design.</p>
+				</div>
+				<div class="about-box me-small-box marquee-card">
+					<h3>Quotes</h3>
+					<p>Turning chaos into something presentable</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 02: Resume -->
+	<div class="about-sub about-sub-resume">
+		<span class="about-kicker reveal"><b>02</b> Resume</span>
+		<div class="resume-anchor reveal">
+			<button type="button" class="resume-toggle" aria-expanded="false" aria-controls="resume-modal">Resume</button>
+		</div>
+		<div class="skills-grid skills-in-resume skills-cv">
+			<article class="skill-card reveal" style="--d:.05s">
+				<span class="stack-label">Web Development and Programming</span>
+				<ul class="skill-tags"><li>Python</li><li>HTML5</li><li>CSS3</li><li>JavaScript (Basic)</li><li>SQL</li><li>PHP(Basic)</li><li>Responsive Web Design</li><li>Debugging and Troubleshooting</li></ul>
+			</article>
+			<article class="skill-card reveal" style="--d:.15s">
+				<span class="stack-label">Graphic Design and UI/UX</span>
+				<ul class="skill-tags"><li>Graphic Design</li><li>Affinity Designer</li><li>Canva</li><li>UI/UX Design</li><li>Typography</li><li>Layout Design</li><li>Branding</li><li>Digital Illustration</li><li>Visual Communication</li></ul>
+			</article>
+			<article class="skill-card reveal" style="--d:.25s">
+				<span class="stack-label">Professional Skills</span>
+				<ul class="skill-tags"><li>Problem-Solving</li><li>Critical Thinking</li><li>Team Collaboration</li><li>Project Management</li><li>Attention to Detail</li><li>Communication</li><li>Time Management</li><li>Adaptability</li></ul>
+			</article>
+		</div>
+		</div>
+
+	<!-- 03: Tools I Use -->
+	<div class="about-sub about-sub-tools">
+		<h2 class="tools-heading reveal"><span class="tools-num">03</span>Tools I Use</h2>
+		<div class="tools-pop">
+				<figure class="tools-logo tool-card" style="--i:0">
+					<img src="img/Affinity logo.svg" alt="Affinity icon" width="240" height="240">
+					<figcaption>Affinity</figcaption>
+				</figure>
+				<figure class="tools-logo tool-card" style="--i:1">
+					<img src="img/VS Code logo.svg" alt="Visual Studio Code icon" width="240" height="240">
+					<figcaption>Visual Studio Code</figcaption>
+				</figure>
+		</div>
+	</div>
+	</div>
+
+</section>
+
+
+<!-- PIXELVERSE (formerly Designs) -->
+<section id="designs" class="section">
+	<h1 class="brand">PIXELVERSE</h1>
+	<div class="pixelverse">
+		<div class="carousel-stage" role="region" aria-roledescription="carousel" aria-label="Pixelverse projects">
+			<div class="carousel-ring"></div>
+		</div>
+		<div class="carousel-controls">
+			<button type="button" class="carousel-arrow carousel-prev" aria-label="Previous design">&#8592;</button>
+			<span class="carousel-caption" aria-live="polite"></span>
+			<button type="button" class="carousel-arrow carousel-next" aria-label="Next design">&#8594;</button>
+		</div>
+		<button type="button" class="pixelverse-all">View all designs</button>
+	</div>
+</section>
+
+
+<!-- CONTACTS -->
+<section id="contacts" class="section">
+	<h1 class="brand">CONTACTS</h1>
+	<div class="contact-stage">
+		<div class="dream-wrap">
+			<h2 class="dream-heading">Dream it up. I’ll make it happen.</h2>
+			<svg class="dream-strand" viewBox="0 0 420 24" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+				<defs>
+					<linearGradient id="strand-fade" x1="0" x2="1" y1="0" y2="0">
+						<stop offset="0" stop-color="#0b0b0e" stop-opacity="0"/>
+						<stop offset="0.18" stop-color="#0b0b0e" stop-opacity="1"/>
+						<stop offset="0.82" stop-color="#0b0b0e" stop-opacity="1"/>
+						<stop offset="1" stop-color="#0b0b0e" stop-opacity="0"/>
+					</linearGradient>
+				</defs>
+				<path fill="none" stroke="url(#strand-fade)" stroke-width="2.6" stroke-linecap="round" d="M10 12 C 80 4, 140 20, 210 12 S 340 4, 410 12">
+					<animate attributeName="d" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"
+						values="M10 12 C 80 4, 140 20, 210 12 S 340 4, 410 12;M10 12 C 80 20, 140 4, 210 13 S 340 20, 410 11;M10 12 C 80 4, 140 20, 210 12 S 340 4, 410 12"/>
+				</path>
+				<path fill="none" stroke="#ffffff" stroke-opacity="0.45" stroke-width="0.8" stroke-linecap="round" d="M60 11 C 110 5, 150 18, 210 11 S 320 5, 360 11">
+					<animate attributeName="d" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"
+						values="M60 11 C 110 5, 150 18, 210 11 S 320 5, 360 11;M60 11 C 110 18, 150 5, 210 12 S 320 18, 360 10;M60 11 C 110 5, 150 18, 210 11 S 320 5, 360 11"/>
+				</path>
+			</svg>
+		</div>
+		<div class="socials contact-socials" id="about-socials">
+			<button class="social-toggle" aria-expanded="false" aria-controls="contact-list">Let’s Connect</button>
+			<canvas class="symbiote-canvas" aria-hidden="true"></canvas>
+			<div class="social-list" id="contact-list">
+				<a href="https://www.instagram.com/francheese.su/" target="_blank" rel="noopener">Instagram</a>
+				<a href="https://www.facebook.com/francheese.su" target="_blank" rel="noopener">Facebook</a>
+				<button type="button" class="gmail-address" data-address="francisvin18@gmail.com">Gmail</button>
+			</div>
+		</div>
+	</div>
+	<svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+		<filter id="symbiote-text" x="-10%" y="-30%" width="120%" height="160%" color-interpolation-filters="sRGB">
+			<feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="2" seed="3" result="noise">
+				<animate attributeName="baseFrequency" dur="9s" values="0.012 0.03;0.018 0.022;0.012 0.03" repeatCount="indefinite"/>
+			</feTurbulence>
+			<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" result="warp"/>
+			<feGaussianBlur in="warp" stdDeviation="1.1" result="blur"/>
+			<feSpecularLighting in="blur" surfaceScale="2.5" specularConstant="0.9" specularExponent="30" lighting-color="#e4ebff" result="spec">
+				<fePointLight x="-200" y="-260" z="240">
+					<animate attributeName="x" values="-200;1400;-200" dur="8s" repeatCount="indefinite"/>
+				</fePointLight>
+			</feSpecularLighting>
+			<feComposite in="spec" in2="warp" operator="in" result="specIn"/>
+			<feComposite in="warp" in2="specIn" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+		</filter>
+	</svg>
+</section>
+
+<!-- RESUME MODAL -->
+<div id="resume-modal" class="resume-modal" aria-hidden="true">
+	<div class="resume-modal-backdrop" data-close-resume></div>
+	<div class="resume-modal-panel" role="dialog" aria-modal="true" aria-labelledby="resume-title">
+		<button type="button" class="resume-close" aria-label="Close resume" data-close-resume>×</button>
+		<div class="me-resume-box" id="about-resume">
+			<div class="resume-head">
+				<span>Resume</span>
+				<strong id="resume-title">FRANCIS VIN R. LODRIGUITO</strong>
+				<p class="resume-tagline">Web Developer | Graphic Designer</p>
+				<p class="resume-contact">francisvin18@gmail.com | +63 945 679 8311 | Puerto Princesa City, MIMAROPA 5300, Philippines</p>
+			</div>
+			<div class="resume-entry">
+				<h4>Summary</h4>
+				<p>Motivated Bachelor of Science in Information Technology student with hands-on experience in web development, programming, graphic design, and UI/UX design through academic and personal projects. Skilled in developing web-based applications, implementing database-driven functionalities, designing responsive interfaces, and creating visually engaging digital materials. Knowledgeable in Python, JavaScript, PHP, C#, SQL, Affinity Designer, and Canva. Demonstrates strong problem-solving abilities, creativity, attention to detail, and teamwork.</p>
+			</div>
+			<div class="resume-entry">
+				<h4>Experience</h4>
+				<p class="resume-role"><strong>Graphic Designer | Academic and Personal Projects</strong><span>2024 – Present</span></p>
+				<ul>
+					<li>Designed and delivered 50 digital graphics for academic presentations while ensuring 100% adherence to project deadlines.</li>
+					<li>Increased visual consistency across 15+ project submissions by developing standardized design layouts, typography systems, and branding elements.</li>
+					<li>Produced visually engaging designs using Affinity Designer, ensuring alignment with project objectives and communication requirements.</li>
+				</ul>
+				<p class="resume-role"><strong>Academic Project Developer | Information Technology</strong><span>2023 – Present</span></p>
+				<ul>
+					<li>Developed web-based applications using ASP.NET, C#, Python, Flask, and SQL, implementing responsive interfaces, CRUD operations, and database integration.</li>
+					<li>Organized development tasks, maintained technical documentation, and coordinated project activities to support timely project completion.</li>
+					<li>Performed debugging, code reviews, and functionality testing to identify and resolve software issues before project demonstrations.</li>
+				</ul>
+			</div>
+			<div class="resume-entry">
+				<h4>Projects</h4>
+				<p class="resume-role"><strong>Zenity – Stress Management and Wellness Web Application</strong><span>Academic Web Application and UI/UX Design Project</span></p>
+				<ul>
+					<li>Developed a web-based stress management platform that centralizes wellness resources and stress-reduction techniques to support users in managing stress effectively.</li>
+					<li>Designed multiple user-focused modules providing educational content and self-help guidance through an accessible digital interface.</li>
+					<li>Conducted thorough requirements analysis, system design, testing, and troubleshooting while maintaining technical documentation throughout the development lifecycle.</li>
+				</ul>
+				<p class="resume-role"><strong>Graphic Designs</strong><span>Personal and Academic Design Projects</span></p>
+				<ul>
+					<li>Created digital graphics, posters, promotional materials, and social media content for personal projects, academic presentations, school activities, and organizational events.</li>
+					<li>Designed original poster concepts using Affinity Designer, applying typography, color theory, visual hierarchy, and layout composition.</li>
+					<li>Developed visually engaging designs and branding materials tailored to different themes, audiences, and creative objectives.</li>
+					<li>Maintained a diverse design portfolio showcasing personal creative works, academic outputs, and continuously developing graphic design skills.</li>
+				</ul>
+				<p class="resume-role"><strong>Barangay Emergency Alert System | Academic System Development Project</strong><span>Academic System Development Project</span></p>
+				<ul>
+					<li>Developed a real-time emergency alert system that supports multiple categories by implementing notification workflows and alert management capabilities.</li>
+					<li>Improved communication efficiency among barangay personnel through centralized emergency reporting and response coordination.</li>
+					<li>Successfully delivered a complete academic project, including database structure design, and user interface development.</li>
+				</ul>
+				<p class="resume-role"><strong>Python Flask CRUD Application | Academic Web Development Project</strong><span>Academic Web Development Project</span></p>
+				<ul>
+					<li>Developed a fully functional CRUD web application with data management features using Flask, Python, and MySQL.</li>
+					<li>Enhanced usability by implementing dashboard statistics, timestamp tracking, and data export functionality.</li>
+					<li>Achieved successful project deployment and testing through meticulous debugging and documentation preparation.</li>
+				</ul>
+				<p class="resume-role"><strong>Puerto Princesa Marine Protected Area (MPA) Dynamic Management and Spatial Information System</strong><span>Bachelor of Science in Information Technology – Capstone Project</span></p>
+				<ul>
+					<li>Developed a web-based Geographic Information System (Web-GIS) for managing and visualizing Marine Protected Areas in Puerto Princesa City.</li>
+					<li>Implemented interactive mapping and MPA boundary management functionalities to support spatial data visualization and management.</li>
+					<li>Designed centralized management of spatial and non-spatial information, including MPA records, ordinances, and environmental reports.</li>
+					<li>Contributed to system architecture, database integration, user interface development, and system testing.</li>
+				</ul>
+			</div>
+			<div class="resume-entry">
+				<h4>Education</h4>
+				<p><strong>Bachelor of Science in Information Technology</strong><br>Palawan State University – Main Campus | Expected Graduation: 2027</p>
+			</div>
+			<div class="resume-entry">
+				<h4>Certifications</h4>
+				<ul>
+					<li>CodeChum – Python Programming | 2024</li>
+				</ul>
+			</div>
+			<div class="resume-entry">
+				<h4>Skills</h4>
+				<p class="resume-role"><strong>Web Development and Programming</strong></p>
+				<p>Python, HTML5, CSS3, JavaScript (Basic), SQL, PHP(Basic), Responsive Web Design, Debugging and Troubleshooting</p>
+				<p class="resume-role"><strong>Graphic Design and UI/UX</strong></p>
+				<p>Graphic Design, Affinity Designer, Canva, UI/UX Design, Typography, Layout Design, Branding, Digital Illustration, Visual Communication</p>
+				<p class="resume-role"><strong>Professional Skills</strong></p>
+				<p>Problem-Solving, Critical Thinking, Team Collaboration, Project Management, Attention to Detail, Communication, Time Management, Adaptability</p>
+			</div>
+			<div class="resume-entry">
+				<h4>Language</h4>
+				<p>English; Filipino</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- GMAIL BUSINESS CARD -->
+<div id="bizcard-modal" class="bizcard-modal" aria-hidden="true">
+	<div class="bizcard-backdrop" data-close-bizcard></div>
+	<div class="bizcard-wrap" role="dialog" aria-modal="true" aria-label="Francis Vin business card">
+		<button type="button" class="bizcard-close" aria-label="Close card" data-close-bizcard>×</button>
+		<div class="bizcard" tabindex="0" role="button" aria-pressed="false" aria-label="Business card. Press to flip.">
+			<div class="bizcard-inner">
+				<div class="bizcard-face bizcard-front">
+					<div class="bizcard-logo bizcard-photo"><img src="img/My character photo.jpg" alt=""></div>
+					<div class="bizcard-id">
+						<strong class="bizcard-name">Francis Vin</strong>
+						<span class="bizcard-role">Web Developer and Graphic Designer</span>
+					</div>
+					<div class="bizcard-mail"><span>francisvin18@gmail.com</span><span class="bizcard-hint">Click to flip</span></div>
+				</div>
+				<div class="bizcard-face bizcard-back">
+					<span class="bizcard-kicker">Contact</span>
+					<ul class="bizcard-list">
+						<li><span>Email</span><a href="mailto:francisvin18@gmail.com">francisvin18@gmail.com</a></li>
+						<li><span>Instagram</span><a href="https://www.instagram.com/francheese.su/" target="_blank" rel="noopener">@francheese.su</a></li>
+						<li><span>Facebook</span><a href="https://www.facebook.com/francheese.su" target="_blank" rel="noopener">francheese.su</a></li>
+						<li><span>Studying</span><em>BS Information Technology · Palawan State University</em></li>
+					</ul>
+					<span class="bizcard-tag">Dream it up. I’ll make it happen.</span>
+				</div>
+			</div>
+		</div>
+		<div class="bizcard-actions">
+			<a class="bizcard-btn" href="mailto:francisvin18@gmail.com">Send an email</a>
+			<button type="button" class="bizcard-btn" data-copy="francisvin18@gmail.com">Copy address</button>
+		</div>
+	</div>
+</div>
+
+<div id="lightbox" class="lightbox" aria-hidden="true">
+	<div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+	<div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Designs">
+		<button class="lightbox-close" aria-label="Close preview" onclick="closeLightbox()">×</button>
+		<div class="design-library-view">
+			<div class="design-library-header">
+				<div>
+					<span class="viewer-kicker">PIXELVERSE</span>
+					<h2>Designs</h2>
+				</div>
+				<p>Choose a design to view its details.</p>
+			</div>
+			<div class="design-library-grid"></div>
+		</div>
+		<div class="design-detail-view" hidden></div>
+	</div>
+</div>
+
+<script src="symbiote.js"></script>
+<script src="designs.js"></script>
+<script src="portfolio.js"></script>
+
+</body>
+</html>

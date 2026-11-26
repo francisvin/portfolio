@@ -1,0 +1,20 @@
+# Operating-system files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editor / IDE settings
+.vscode/
+.idea/
+
+# Temporary and lock files
+*.tmp
+~$*
+
+# Python cache (tools/make-web-images.py)
+__pycache__/
+*.pyc
+
+# Local environment / secrets (never commit these)
+.env
+.env.*

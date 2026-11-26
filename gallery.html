@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Design Gallery · Francis Vin Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="img/Logo icon.png">
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<header class="dg-header">
+	<a class="dg-back" href="portfolio.html#designs">← Back to Pixelverse</a>
+	<div class="dg-title">
+		<span class="dg-kicker">Pixelverse</span>
+		<h1>Design Gallery</h1>
+	</div>
+	<span class="dg-count" aria-live="polite"></span>
+</header>
+
+<main>
+	<div class="dg-watermark-wrap" aria-hidden="true"><h2 class="dg-watermark">PIXELVERSE</h2></div>
+	<!-- filled automatically from img/pixelverse/ by gallery.js -->
+	<div class="dg-grid" aria-label="All designs"></div>
+</main>
+
+<!-- full view: the selected image only -->
+<div class="dg-viewer" aria-hidden="true">
+	<div class="dg-viewer-backdrop"></div>
+	<img class="dg-viewer-img" alt="">
+	<button type="button" class="dg-viewer-close" aria-label="Close">×</button>
+</div>
+
+<script src="designs.js"></script>
+<script src="gallery.js"></script>
+</body>
+</html>
